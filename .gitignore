@@ -2,3 +2,7 @@ build/*
 *~
 *.pyc
 *__pycache__*
+*.so
+GPATH
+GRTAGS
+GTAGS
