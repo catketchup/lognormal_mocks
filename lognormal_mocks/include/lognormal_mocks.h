@@ -52,4 +52,3 @@ void lognormal_mocks_density2poisson(double *map, gsl_rng *r, int Nmaps, int nsi
 
 void dpotrf_(char *UPLO, int *N, double *A, int *LDA, int *INFO );
 void dpotri_(char *UPLO, int *N, double *A, int *LDA, int *INFO );
-
