@@ -9,12 +9,12 @@ cimport cython
 cdef extern from "lognormal_mocks.h":
     void lognormal_mocks_stats_fullsky(
         int Nmaps, double *rhobar,
-        int Nl, double *Cl,
+        int Nl, double *Cldelta,
         double *gaussbar, double *Clgauss,
         double *xidelta, int Nth
     )
 
-# rhobar, Cl, gaussbar, Clgauss, xidelta are double *
+# rhobar, Cldelta, gaussbar, Clgauss, xidelta are double *
 
 def lognormal_mocks_stats(double[:] rhobar, double[:,:,::1] Cl, Ntheta):
     Nmaps = rhobar.size

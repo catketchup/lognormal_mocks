@@ -1,15 +1,18 @@
 from distutils.core import setup
 from distutils.extension import Extension
+from distutils.sysconfig import get_python_lib
 from Cython.Build import cythonize
 import numpy
 import os
 import subprocess as sbp
 import os.path as osp
 
+numpy_inc = os.path.join(get_python_lib(plat_specific=1), 'numpy/core/include')
+
 lognormal_mocks_extension = Extension(name='py_lognormal_mocks',
                                       sources=['python/py_lognormal_mocks.pyx'],
-                                      libraries=['lognormal_mocks', 'gsl','gslcblas','healpix','cfitsio','gomp','lapack', 'gfortran', 'sharp', 'fftpack', 'gcc'],                                library_dirs=['/home/ketchup/tools/lognormal_mocks/build/lib','/home/ketchup/gsl/lib', '/home/ketchup/tools/Healpix_3.82_2022Jul28/Healpix_3.82/lib', '/home/ketchup/tools/lapack-3.11.0'],
-                                      include_dirs = [numpy.get_include(),'lognormal_mocks/include/', '/home/ketchup/gsl/include/gsl', '/home/ketchup/tools/Healpix_3.82_2022Jul28/Healpix_3.82', '/home/ketchup/tools/lapack-3.11.0/LAPACKE/include'])
+                                      include_dirs = [numpy_inc,'/home/ketchup/tools/lognormal_mocks/lognormal_mocks/include', '/home/ketchup/tools/Healpix_3.82_2022Jul28/Healpix_3.82/include','/home/ketchup/tools/lapack-3.11.0','/home/ketchup/tools/libsharp/auto/include'],
+                                    libraries=['/home/ketchup/tools/lognormal_mocks/build/lib/lognormal_mocks', 'gsl','gslcblas','/home/ketchup/tools/Healpix_3.82_2022Jul28/Healpix_3.82/lib/healpix','cfitsio','gomp','/home/ketchup/tools/lapack-3.11.0/lapack','/home/ketchup/tools/libsharp/auto/lib/sharp', '/home/ketchup/tools/libsharp/auto/lib/fftpack', '/home/ketchup/tools/libsharp/auto/lib/c_utils', 'gfortran', 'gcc', '/lib/x86_64-linux-gnu/mvec'])
 
 setup(name='py_lognormal_mocks',
       ext_modules=cythonize([lognormal_mocks_extension]))
