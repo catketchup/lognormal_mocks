@@ -8,7 +8,7 @@ numpy_inc = os.path.join(get_python_lib(plat_specific=1), 'numpy/core/include')
 current_path = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_path = os.path.dirname(current_path)
 
-# dependence paths
+# dependence paths from input
 healpix_path = input("Enter healpix path:")
 lapack_path = input("Enter lapack path:")
 sharp_path = input("Enter libsharp path:")
