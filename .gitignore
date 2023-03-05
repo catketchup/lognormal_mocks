@@ -4,6 +4,7 @@ build/*
 *__pycache__*
 *.so
 .ipynb_checkpoints
+python/*.c
 my_configure.org
 GPATH
 GRTAGS
