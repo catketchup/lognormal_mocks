@@ -8,8 +8,7 @@
             "/home/ketchup/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/arrayscalars.h",
             "/home/ketchup/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h",
             "/home/ketchup/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h",
-            "/home/ketchup/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ufuncobject.h",
-            "lognormal_mocks/include/lognormal_mocks.h"
+            "/home/ketchup/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ufuncobject.h"
         ],
         "extra_compile_args": [
             "-fPIC",
@@ -18,7 +17,7 @@
         ],
         "include_dirs": [
             "/home/ketchup/anaconda3/lib/python3.8/site-packages/numpy/core/include",
-            "./lognormal_mocks/include",
+            "/home/ketchup/tools/lognormal_mocks/python/lognormal_mocks/include",
             "/home/ketchup/tools/Healpix_3.82_2022Jul28/Healpix_3.82/include",
             "/home/ketchup/tools/lapack-3.11.0",
             "/home/ketchup/tools/libsharp/auto/include"
@@ -38,7 +37,7 @@
             "mvec"
         ],
         "library_dirs": [
-            "./lognormal_mocks/build/lib/",
+            "/home/ketchup/tools/lognormal_mocks/python/lognormal_mocks/build/lib",
             "/home/ketchup/tools/Healpix_3.82_2022Jul28/Healpix_3.82/lib",
             "/home/ketchup/tools/lapack-3.11.0",
             "/home/ketchup/tools/libsharp/auto/lib",

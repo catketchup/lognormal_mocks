@@ -24,7 +24,7 @@ build/lib/liblognormal_mocks.a: build/lognormal_mocks_stats.o build/healpix_lege
 	ar rcs build/lib/liblognormal_mocks.a build/lognormal_mocks_stats.o build/healpix_legendre_c.o build/symmetric_legendre.o
 
 py_lognormal_mocks: $(PYDIR)/setup.py $(PYDIR)/py_lognormal_mocks.pyx build/lib/liblognormal_mocks.a
-	python python/setup.py build_ext --inplace
+	# python python/setup.py build_ext --inplace
 	python python/setup.py install --user
 
 .PHONY: clean
@@ -32,7 +32,7 @@ py_lognormal_mocks: $(PYDIR)/setup.py $(PYDIR)/py_lognormal_mocks.pyx build/lib/
 clean:
 	rm -rf $(BLDDIR)
 	rm -rf $(LIBDIR)
-	rm $(MDIR)/*.so
+	# rm $(MDIR)/*.so
 	rm $(LOCALDIR)/py_lognormal*
 	rm $(PYDIR)/*.c
 
