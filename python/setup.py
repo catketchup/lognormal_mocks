@@ -34,7 +34,5 @@ lognormal_mocks_extension = Extension(name='py_lognormal_mocks',
                                       extra_compile_args=['-fPIC','-Wall','-g']
 )
 
-setup(author='Hongbo Cai',
-      author_email='hoc34@pitt.edu',
-      name='py_lognormal_mocks',
+setup(name='py_lognormal_mocks',
       ext_modules=cythonize([lognormal_mocks_extension]))

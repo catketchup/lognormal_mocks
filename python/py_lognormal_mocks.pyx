@@ -1,3 +1,10 @@
+"""
+.. module:: py_lognormal_mocks
+    :synopsis: Python wrapper lognormal_mocks
+.. author:: Hongbo Cai
+"""
+
+
 import numpy as np
 cimport numpy as np
 from libc.stdlib cimport *
@@ -19,6 +26,20 @@ cdef extern from "lognormal_mocks.h":
 # rhobar, Cldelta, gaussbar, Clgauss, xidelta are double *
 
 def lognormal_mocks_stats(double[:] rhobar, double[:,:,::1] Cl, Ntheta):
+    """
+    This code takes means and cross-power spectra as inputs, then outputs means and cross-spectra for the Gaussianized fields gauss0 = log(map0), gauss1 = log(map1)
+
+    Parameters
+    ----------
+    rhobar: mean densities
+    Cl: power spectrum of field
+    Ntheta: num of theta controls the accuracy of the intermediate correlations functions
+
+    Returns
+    -------
+    (gaussbar, Clgauss) : tuple, mean and overdensity of Gaussianized field
+    """
+
     Nmaps = rhobar.size
     Nl = Cl.shape[2]
 

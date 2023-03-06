@@ -12,7 +12,7 @@ $(shell if [ ! -e $(BLDDIR) ];then mkdir $(BLDDIR); mkdir $(LIBDIR); fi)
 default: py_lognormal_mocks
 
 build/healpix_legendre_c.o: lognormal_mocks/src/healpix_legendre_c.c
-	gcc -c lognormal_mocks/src/healpix_legendre_c.c -o build/healpix_legendre_c.o -I 	lognormal_mocks/include -I -lm -fPIC -Wall -g
+	gcc -c lognormal_mocks/src/healpix_legendre_c.c -o build/healpix_legendre_c.o -I lognormal_mocks/include -I -lm -fPIC -Wall -g
 
 build/symmetric_legendre.o: lognormal_mocks/src/symmetric_legendre.c
 	gcc -c lognormal_mocks/src/symmetric_legendre.c -o build/symmetric_legendre.o -I lognormal_mocks/include -I -lm -fPIC -Wall -g
@@ -32,8 +32,8 @@ py_lognormal_mocks: $(PYDIR)/setup.py $(PYDIR)/py_lognormal_mocks.pyx build/lib/
 clean:
 	rm -rf $(BLDDIR)
 	rm -rf $(LIBDIR)
-	# rm $(MDIR)/*.so
 	rm $(LOCALDIR)/py_lognormal*
 	rm $(PYDIR)/*.c
+	# rm $(MDIR)/*.so
 
 # CC = gcc
