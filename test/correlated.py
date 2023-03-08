@@ -1,6 +1,6 @@
 from pylab import *
 from healpy import *
-from lognormal_mocks import *
+from py_lognormal_mocks import *
 
 seed(329968)
 
@@ -21,7 +21,7 @@ rhobar = array([rhobarA,rhobarB])
 
 print(rhobar)
 
-# 
+#
 ClA = l**0.5 * exp(-l**2/2./130.**2) *1e-10
 ClB = exp(-l**2/2./100.**2) * 1e-9
 ClAB = 0.5 * sqrt(ClA * ClB)

@@ -1,6 +1,6 @@
 from pylab import *
 from healpy import *
-from lognormal_mocks import *
+from py_lognormal_mocks import *
 
 close('all')
 

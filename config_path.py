@@ -18,4 +18,4 @@ sharp_lib_path =
 # glibc
 glibc_include_path =
 # libmvec.a should be in this dir
-glibc_lib_path = 
+glibc_lib_path =

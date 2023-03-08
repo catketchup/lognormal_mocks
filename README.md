@@ -2,6 +2,9 @@
 
 This code allows for the production of 2-d correlated lognormal random fields.  These have application as e.g. cosmological (rho > 0) density fields projected on the sky.  The basic math behind this method comes from Carron & Neyrinck (2012) ApJ 750 28, section 3.1.
 
+# py_lognormal_mocks branch
+This branch is equipped with a Python wrapper using Cython defined in .... To use this branch, you should use "import py_lognormal_mocks" instead of "import lognormal_mocks".
+
 ## Examples
 
 The test/ directory provides several examples of the code in use.  These codes follow a similar structure.  The mean and the power spectrum is specified for the lognormal field and fed to the function lognormal_mocks_stats().  This produces the mean and power spectrum of the "Gaussianized" field.  We use healpy to generate the Gaussianized maps, then exponentiate them to produce the lognormal maps.  Finally we verify that the lognormal field have the desired power spectra.

@@ -1,6 +1,6 @@
 from pylab import *
 from healpy import *
-from lognormal_mocks import *
+from py_lognormal_mocks import *
 
 close('all')
 
@@ -25,7 +25,7 @@ rhobar = array([ngal,kappabar])  # array of mean must be size Nmap
 
 # Note the ngal factors make the statistics for the galaxy density field
 Cl = array([[ ngal**2 * clgg, ngal* clkg ],
-            [ ngal* clkg,            clkk]])  # array of input Cl must be size (Nmap, Nmap, Nl).  If this is the wrong shape it will fail 
+            [ ngal* clkg,            clkk]])  # array of input Cl must be size (Nmap, Nmap, Nl).  If this is the wrong shape it will fail
 
 Ntheta = 10000 # accuracy parameter
 
