@@ -3,7 +3,7 @@
 This code allows for the production of 2-d correlated lognormal random fields.  These have application as e.g. cosmological (rho > 0) density fields projected on the sky.  The basic math behind this method comes from Carron & Neyrinck (2012) ApJ 750 28, section 3.1.
 
 # py_lognormal_mocks branch
-This branch is equipped with a Python wrapper using Cython defined in .... To use this branch, you should use "import py_lognormal_mocks" instead of "import lognormal_mocks".
+This branch is equipped with a Python wrapper using Cython defined in https://github.com/catketchup/lognormal_mocks/blob/master/python/py_lognormal_mocks.pyx. To use this branch, you should use "import py_lognormal_mocks" instead of "import lognormal_mocks".
 
 ## Examples
 
