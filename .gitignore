@@ -5,7 +5,7 @@ build/*
 *.so
 .ipynb_checkpoints
 python/*.c
-my_configure.org
+my_config.org
 GPATH
 GRTAGS
 GTAGS
