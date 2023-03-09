@@ -1,16 +1,13 @@
-# Lognormal Mocks
-
-This code allows for the production of 2-d correlated lognormal random fields.  These have application as e.g. cosmological (rho > 0) density fields projected on the sky.  The basic math behind this method comes from Carron & Neyrinck (2012) ApJ 750 28, section 3.1.
-
 # py_lognormal_mocks branch
-This branch is equipped with a Python wrapper using Cython defined in [py\_lognormal\_mocks.pyx](https://github.com/catketchup/lognormal_mocks/blob/master/python/py_lognormal_mocks.pyx). A new setup file is given [setup.py](https://github.com/catketchup/lognormal_mocks/blob/master/python/setup.py), and a makefile is added [Makefile](https://github.com/catketchup/lognormal_mocks/blob/master/Makefile).
+This code is a modified version of [lognormal\_mocks](https://github.com/huffenberger-cosmology/lognormal_mocks).
+It is equipped with a Python wrapper using Cython defined in [py\_lognormal\_mocks.pyx](https://github.com/catketchup/lognormal_mocks/blob/master/python/py_lognormal_mocks.pyx). A new setup file is given [setup.py](https://github.com/catketchup/lognormal_mocks/blob/master/python/setup.py), and a makefile is added [Makefile](https://github.com/catketchup/lognormal_mocks/blob/master/Makefile).
 The original mod.c and setup.py are not needed and moved to [bak](https://github.com/catketchup/lognormal_mocks/tree/master/bak).
 
-To install this branch, firstly specify the paths of header files and libs listed in [config\_path.py](https://github.com/catketchup/lognormal_mocks/blob/master/config_path.py), and run "make" in the main directory. Run "make clear" to uninstall this branch.
+To install this code, firstly specify the paths of header files and libs listed in [config\_path.py](https://github.com/catketchup/lognormal_mocks/blob/master/config_path.py), and run "make" in the main directory. Run "make clear" to uninstall this branch.
 
-To import this branch, you should use "import py_lognormal_mocks" instead of "import lognormal_mocks".
+To import this code, you should use "import py_lognormal_mocks" instead of "import lognormal_mocks".
 
-This branch is edited by Hongbo Cai.
+This code is edited by Hongbo Cai.
 
 ## Examples
 
